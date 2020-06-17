@@ -250,9 +250,7 @@ public class DisconfCenterFile extends DisconfCenterBaseModel {
          * 返回值
          *
          * @param fieldValue
-         *
          * @return
-         *
          * @throws Exception
          */
         public Object getFieldValueByType(Object fieldValue) throws Exception {

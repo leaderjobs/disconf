@@ -156,7 +156,9 @@ public class DisconfStoreFileProcessorImpl implements DisconfStoreProcessor {
     }
 
     /**
-     *
+     * 获取配置信息内容
+     * @param fileName 文件名
+     * @param keyName 键名
      */
     @Override
     public Object getConfig(String fileName, String keyName) {

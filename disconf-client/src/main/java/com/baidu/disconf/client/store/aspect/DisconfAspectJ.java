@@ -31,6 +31,9 @@ public class DisconfAspectJ {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(DisconfAspectJ.class);
 
+    /**
+     * 切入点
+     */
     @Pointcut(value = "execution(public * *(..))")
     public void anyPublicMethod() {
     }
@@ -38,7 +41,7 @@ public class DisconfAspectJ {
     /**
      * 获取配置文件数据, 只有开启disconf远程才会进行切面
      *
-     * @throws Throwable
+     * @throws Throwable Throwable
      */
     @Around("anyPublicMethod() && @annotation(disconfFileItem)")
     public Object decideAccess(ProceedingJoinPoint pjp, DisconfFileItem disconfFileItem) throws Throwable {
